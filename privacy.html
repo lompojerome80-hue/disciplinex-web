@@ -53,10 +53,12 @@ footer { margin-top: 3rem; font-size: .85rem; color: #6b6b78; }
 <ul><li>code de discipline : seule une empreinte salée (SHA-256, 10 000 itérations) et</li></ul>
 <p>son sel aléatoire sont conservés. Le code lui-même n'est jamais écrit sur le disque, ce qui permet de le changer ou de le supprimer à tout moment ;</p>
 <ul><li>réglages de l'application et préférences d'affichage ;</li><li>liste des applications sélectionnées pour le blocage (noms de paquets uniquement).</li></ul>
+<p>L'application est conçue pour être utilisée par la personne qui tient le téléphone. Un parent peut aussi l'installer sur le téléphone de son enfant et s'en servir pour l'aider à tenir ses engagements. Dans ce cas, le parent est la personne qui lit ces données sur l'appareil : l'application ne distingue pas les rôles, ne crée aucun compte, n'envoie aucune notification au parent et n'envoie rien à l'extérieur. Tout reste visible par quiconque ouvre l'application sur cet appareil.</p>
 <p>Ces données sont chiffrées par le sandbox applicatif d'Android et ne sont pas lues par les autres applications.</p>
 <h2>4. Ce que le code de discipline protège</h2>
-<p>Lorsque vous définissez un code de discipline, il est demandé avant d'arrêter une session avant son terme, de terminer une session anticipément, de débloquer une application, de retirer une application de la liste, de modifier les horaires de blocage et d'utiliser la sortie d'urgence.</p>
-<p>Le code n'est jamais transmis, ni conservé en clair, ni lisible par une autre application. Vous pouvez le remplacer ou le supprimer à tout moment depuis</p>
+<p>Lorsque vous définissez un code de discipline, il est demandé avant d'arrêter une session avant son terme, de terminer une session anticipativement, de débloquer une application, de retirer une application de la liste, de modifier les horaires de blocage et d'utiliser la sortie d'urgence.</p>
+<p>Le code n'est jamais transmis, ni conservé en clair, ni lisible par une autre application. Le remplacer et le supprimer demandent tous deux le code actuel : l'application vérifie ce code avant d'appliquer le changement, et un code erroné laisse la protection inchangée. Ces deux actions restent disponibles depuis</p>
+<p>dépend donc du code lui-même, et non d'un secret supplémentaire. Si le code est oublié, il faut effacer les données de l'application, ce qui supprime aussi la sessions et l'historique.</p>
 <h2>5. Permissions demandées et finalité</h2>
 <table><thead><tr>
 <th>Permission</th>
