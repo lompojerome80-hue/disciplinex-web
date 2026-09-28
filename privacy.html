@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Politique de confidentialité — DisciplineX</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto; padding: 48px 24px 96px; max-width: 46rem;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1b1b1f; background: #fbfbfd;
+}
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; }
+h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-top: .5rem; border-top: 1px solid #e3e3ea; }
+p, li { color: #26262c; }
+blockquote {
+  margin: 1.5rem 0; padding: .9rem 1.1rem; border-left: 4px solid #f0a202;
+  background: #fff6e2; border-radius: 0 6px 6px 0; color: #4a3a12;
+}
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+th, td { border: 1px solid #d9d9e2; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+th { background: #f1f1f6; }
+code { background: #eeeef3; padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
+a { color: #1a4fd6; }
+footer { margin-top: 3rem; font-size: .85rem; color: #6b6b78; }
+@media (prefers-color-scheme: dark) {
+  body { background: #131316; color: #e8e8ee; }
+  h2 { border-top-color: #2c2c34; }
+  p, li { color: #d5d5de; }
+  blockquote { background: #2a2410; color: #f0dfae; }
+  th { background: #232329; }
+  th, td { border-color: #33333d; }
+  code { background: #26262e; }
+  a { color: #8fb4ff; }
+  footer { color: #9a9aa8; }
+}
+</style>
+</head>
+<body>
+<h1>Politique de confidentialité — DisciplineX</h1>
+<p>Dernière mise à jour : 27 septembre 2026</p>
+<h2>1. Éditeur</h2>
+<p>Lompo Jérôme — développeur indépendant Contact : lompojerome80@gmail.com</p>
+<h2>2. Données collectées</h2>
+<p>DisciplineX ne collecte <strong>aucune donnée personnelle</strong> et ne transmet <strong>aucune information</strong> vers un serveur. L'application ne contient aucune dépendance d'analyse d'audience, aucun traceur publicitaire et ne demande aucune connexion.</p>
+<h2>3. Données stockées sur l'appareil</h2>
+<p>Toutes les données restent dans l'espace de stockage privé de l'application :</p>
+<ul><li>prénom et objectif principal saisis lors de l'onboarding ;</li><li>objectifs, habitudes, sessions de focus, alarmes, fenêtres de blocage ;</li><li>journaux d'activité quotidienne et score de discipline ;</li><li>durée d'utilisation hebdomadaire par application, lue dans les statistiques</li></ul>
+<p>d'usage du système, uniquement si vous avez accordé l'accès à l'utilisation ;</p>
+<ul><li>code de discipline : seule une empreinte salée (SHA-256, 10 000 itérations) et</li></ul>
+<p>son sel aléatoire sont conservés. Le code lui-même n'est jamais écrit sur le disque, ce qui permet de le changer ou de le supprimer à tout moment ;</p>
+<ul><li>réglages de l'application et préférences d'affichage ;</li><li>liste des applications sélectionnées pour le blocage (noms de paquets uniquement).</li></ul>
+<p>Ces données sont chiffrées par le sandbox applicatif d'Android et ne sont pas lues par les autres applications.</p>
+<h2>4. Ce que le code de discipline protège</h2>
+<p>Lorsque vous définissez un code de discipline, il est demandé avant d'arrêter une session avant son terme, de terminer une session anticipément, de débloquer une application, de retirer une application de la liste, de modifier les horaires de blocage et d'utiliser la sortie d'urgence.</p>
+<p>Le code n'est jamais transmis, ni conservé en clair, ni lisible par une autre application. Vous pouvez le remplacer ou le supprimer à tout moment depuis</p>
+<h2>5. Permissions demandées et finalité</h2>
+<table><thead><tr>
+<th>Permission</th>
+<th>Finalité</th>
+</tr></thead><tbody>
+<tr><td>Service d'accessibilité</td><td>Détecter l'application que l'utilisateur ouvre afin d'appliquer le blocage choisi. L'application lit uniquement le nom du paquet et le titre de la fenêtre active. Elle ne lit pas le contenu des écrans, ne capture pas les frappes clavier et n'enregistre rien.</td></tr>
+<tr><td><code>PACKAGE_USAGE_STATS</code></td><td>Afficher la durée d'utilisation de chaque application dans l'onglet Blocage et dans les statistiques. Android ne lit ces durées qu'avec cette autorisation, qui doit être accordée manuellement dans les réglages du système. Les chiffres restent sur l'appareil.</td></tr>
+<tr><td><code>QUERY_ALL_PACKAGES</code></td><td>Lister les applications lancables installées sur l'appareil, afin de proposer uniquement les applications réellement présentes dans la liste de blocage. Aucune donnée n'est transmise.</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Rappels d'alarmes et notifications de fin de session.</td></tr>
+<tr><td><code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code></td><td>Déclencher les alarmes et le démarrage automatique des sessions à l'heure exacte.</td></tr>
+<tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Reprogrammer les alarmes après un redémarrage.</td></tr>
+<tr><td><code>VIBRATE</code> / <code>WAKE_LOCK</code></td><td>Vibration et maintien de l'écran actif pendant une session de focus.</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Maintenir le blocage actif pendant une session.</td></tr>
+<tr><td><code>USE_BIOMETRIC</code></td><td>Déverrouillage de l'application par empreinte ou visage, si l'acheteur l'active.</td></tr>
+<tr><td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td><td>Empêcher Android de tuer le service de blocage pendant une session.</td></tr>
+</tbody></table>
+<p>Vous pouvez révoquer chacune de ces autorisations à tout moment depuis les réglages Android, sans que cela n'empêche le reste de l'application de fonctionner.</p>
+<h2>6. Service d'accessibilité</h2>
+<p>L'utilisation d'un service d'accessibilité est une décision sensible, car elle permet normalement de contrôler l'appareil. DisciplineX s'en sert dans un but strictement limité :</p>
+<ul><li>il lit <strong>uniquement</strong> le nom du paquet et le libellé de l'application au premier plan ;</li><li>il ne fait <strong>aucune</strong> capture d'écran, <strong>aucune</strong> lecture de contenu, <strong>aucune</strong></li></ul>
+<p>écoute du micro, <strong>aucun</strong> accès à la localisation, aux contacts, aux SMS ou aux fichiers ;</p>
+<ul><li>il ne transmet <strong>rien</strong> à l'extérieur de l'appareil ;</li><li>il ne s'active que lorsque l'utilisateur l'a explicitement activé dans les</li></ul>
+<p>réglages Android, et il peut être désactivé à tout moment.</p>
+<p>Pour plus de détails, consultez la <a href="https://support.google.com/googleplay/android/answer/10964491">déclaration d'usage de l'API Accessibility</a>.</p>
+<h2>7. Suppression des données</h2>
+<ul><li><strong>Depuis l'application :</strong> *Profil &amp; paramètres → Données → Effacer toutes mes</li></ul>
+<p>données* supprime le stockage local après confirmation explicite.</p>
+<ul><li><strong>Depuis le système :</strong> *Réglages Android → Applications → DisciplineX →</li></ul>
+<p>Effacer les données*, ou désinstaller l'application.</p>
+<p>Aucune donnée n'existe ailleurs que sur l'appareil : la suppression est donc immédiate et définitive.</p>
+<h2>8. Enfants</h2>
+<p>L'application n'est pas destinée aux enfants de moins de 13 ans et ne collecte aucune donnée personnelle, quel que soit l'âge de l'utilisateur.</p>
+<h2>9. Modifications</h2>
+<p>Toute mise à jour de cette politique sera publiée à la même adresse, avec une nouvelle date de mise à jour. Les versions antérieures sont conservées dans l'historique de version du projet.</p>
+<footer>DisciplineX &mdash; Lompo J&eacute;r&egrave;me &mdash; <a href="mailto:lompojerome80@gmail.com">lompojerome80@gmail.com</a></footer>
+</body>
+</html>
